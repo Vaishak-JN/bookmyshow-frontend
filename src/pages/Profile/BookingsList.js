@@ -28,9 +28,9 @@ const BookingsList = () => {
     }
 
     useEffect(() => {
-        if (!shows.length) {
-            getData()
-        }
+
+        getData()
+
     }, [])
     return (
         (shows?.length !== 0 && <div className="shows-container">

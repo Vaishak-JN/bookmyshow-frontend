@@ -188,12 +188,13 @@ const TheatresList = () => {
 
 
             <Modal
+
                 open={showTheatreForm}
                 onClose={closeModal}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style}>
+                <Box sx={style} style={{ overflow: "scroll", maxHeight: "70%" }}>
                     <TheatresForm onClose={closeModal} formType={formType} selectedTheatre={selectedTheatre} />
 
                 </Box>
@@ -201,12 +202,13 @@ const TheatresList = () => {
 
 
             <Modal
+
                 open={showTheatreShowForm}
                 onClose={closeShowModal}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style}>
+                <Box sx={style} style={{ overflow: "scroll", maxHeight: "70%" }}>
                     <Shows onClose={closeShowModal} selectedTheatre={selectedTheatre} />
                 </Box>
             </Modal>

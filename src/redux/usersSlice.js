@@ -6,7 +6,7 @@ const usersSlice = createSlice({
     name: "users",
     initialState: {
         user: {},
-        token: localStorage.getItem("token") || null,
+        token: "",
         bookings: []
     },
     reducers: {
@@ -17,7 +17,7 @@ const usersSlice = createSlice({
             state.token = action.payload
         },
         ResetState: (state, action) => {
-            state.user = ""
+            state.user = null
             state.token = null
         }
     },

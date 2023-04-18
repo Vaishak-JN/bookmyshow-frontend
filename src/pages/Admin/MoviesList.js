@@ -162,8 +162,9 @@ const MoviesList = () => {
                 onClose={closeModal}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
+
             >
-                <Box sx={style}>
+                <Box sx={style} style={{ overflow: "scroll", maxHeight: "60%" }}>
 
                     <MovieForm getData={getData} onClose={closeModal} formType={formType} selectedMovie={selectedMovie} />
                 </Box>
